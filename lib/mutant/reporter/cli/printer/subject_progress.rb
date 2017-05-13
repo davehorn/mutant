@@ -9,7 +9,7 @@ module Mutant
           delegate(
             :tests,
             :subject,
-            :coverage,
+            :mutant_coverage,
             :runtime,
             :amount_mutations_killed,
             :amount_mutations,

@@ -6,7 +6,7 @@ Rake.application.load_imports
 
 task('metrics:mutant').clear
 namespace :metrics do
-  task mutant: :coverage do
+  task mutant: :mutant_coverage do
     arguments = %w[
       bundle exec mutant
       --include lib

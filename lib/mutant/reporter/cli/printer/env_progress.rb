@@ -5,7 +5,7 @@ module Mutant
         # Env progress printer
         class EnvProgress < self
           delegate(
-            :coverage,
+            :mutant_coverage,
             :amount_subjects,
             :amount_mutations,
             :amount_mutations_alive,

@@ -3,14 +3,14 @@ module Mutant
   module Result
 
     # Coverage mixin
-    module Coverage
+    module MutantCoverage
       FULL_COVERAGE = Rational(1).freeze
       private_constant(*constants(false))
 
       # Observed coverage
       #
       # @return [Rational]
-      def coverage
+      def mutant_coverage
         if amount_mutation_results.zero?
           FULL_COVERAGE
         else
@@ -66,7 +66,7 @@ module Mutant
 
     # Env result object
     class Env
-      include Coverage, Result, Anima.new(
+      include MutantCoverage, Result, Anima.new(
         :env,
         :runtime,
         :subject_results
@@ -76,7 +76,7 @@ module Mutant
       #
       # @return [Boolean]
       def success?
-        coverage.eql?(Rational(1))
+        mutant_coverage.eql?(Rational(1))
       end
       memoize :success?
 
@@ -120,7 +120,7 @@ module Mutant
 
     # Subject result
     class Subject
-      include Coverage, Result, Anima.new(
+      include MutantCoverage, Result, Anima.new(
         :mutation_results,
         :subject,
         :tests

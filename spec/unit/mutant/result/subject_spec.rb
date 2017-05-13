@@ -44,7 +44,7 @@ RSpec.describe Mutant::Result::Subject do
   end
 
   describe '#coverage' do
-    subject { object.coverage }
+    subject { object.mutant_coverage }
 
     {
       'full coverage'    => 1r,

@@ -7,7 +7,7 @@ module Mutant
           FORMAT = '(%02d/%02d) %3d%% - killtime: %0.02fs runtime: %0.02fs overhead: %0.02fs'.freeze
 
           delegate(
-            :coverage,
+            :mutant_coverage,
             :runtime,
             :amount_mutations_killed,
             :amount_mutations,

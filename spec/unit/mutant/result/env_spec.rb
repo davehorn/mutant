@@ -48,7 +48,7 @@ RSpec.describe Mutant::Result::Env do
   end
 
   describe '#coverage' do
-    subject { object.coverage }
+    subject { object.mutant_coverage }
 
     context 'when there are no results' do
       let(:results) { 0 }
