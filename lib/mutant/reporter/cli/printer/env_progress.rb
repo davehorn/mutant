@@ -58,7 +58,7 @@ module Mutant
           #
           # @api private
           def coverage_percent
-            coverage * 100
+            mutant_coverage * 100
           end
 
           # Overhead in percent

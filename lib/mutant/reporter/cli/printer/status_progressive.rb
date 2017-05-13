@@ -24,7 +24,7 @@ module Mutant
               FORMAT,
               amount_mutations_killed,
               amount_mutations,
-              coverage * 100,
+              mutant_coverage * 100,
               killtime,
               runtime,
               overhead
